@@ -4,7 +4,9 @@ import express from "express";
 import path from "path";
 import authRouter from "./routes/auth.route.js";
 import messageRouter from "./routes/message.route.js";
+import connectDB from "./config/db.js";
 // !Start
+await connectDB()
 const app = express();
 // !Variables
 const __dirname = path.resolve();
